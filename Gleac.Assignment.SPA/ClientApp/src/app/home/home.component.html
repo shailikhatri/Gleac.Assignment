@@ -1,0 +1,63 @@
+
+
+
+<div class="card m-3">
+  <h1>Welcome to Levenshtein distance!</h1>
+  <div class="card-body">
+
+    <div class="form-row">
+      <form [formGroup]="ldForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group col">
+          <label>
+            First Word:
+          </label>
+          <input type="text" maxlength="15"  formControlName="firstWord" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstWord.errors }">
+
+          <div *ngIf="submitted && f.firstWord.errors" class="invalid-feedback">
+            <div *ngIf="f.firstWord.errors.required">First Word is required</div>
+          </div>
+          <div *ngIf="submitted && f.firstWord.errors" class="invalid-feedback">
+            <div *ngIf="f.firstWord.errors.pattern">Only alphabets are allowed.</div>
+          </div>
+
+        </div>
+        <div class="form-group col">
+          <label>
+            Second Word:
+          </label>
+          <input type="text" maxlength="15" formControlName="secondWord" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.secondWord.errors }">
+
+          <div *ngIf="submitted && f.secondWord.errors" class="invalid-feedback">
+            <div *ngIf="f.secondWord.errors.required">Second Word is required</div>
+          </div>
+          <div *ngIf="submitted && f.secondWord.errors" class="invalid-feedback">
+            <div *ngIf="f.secondWord.errors.pattern">Only alphabets are allowed.</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mr-1 ">Calculate LD</button>
+          <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+        </div>
+      </form>
+
+    </div>
+    <div><br /></div>
+    <div class="form-row">
+      <b>Calculated Levenshtein distance: {{distance}}</b>
+    </div>
+    <div class="form-row">
+      <table class="game-board" border="1" cellpadding="10" cellspacing="10">
+        <tr> 
+          <td style="background-color: lavenderblush;border: 1px solid;" *ngFor="let i of secondWordLength">{{ i }}</td>
+        </tr>
+        <tr *ngFor="let i of matrix;index as k" >
+          <td style="background-color:lavenderblush;border:1px solid;">{{firstWordLength[k+1]}}</td>
+          <td [ngStyle]="(k==0 || m==0)?{'background-color':'lavender'}:{'background-color':'white'}" style="border:1px solid;" *ngFor="let j of i;index as m">{{ j }}</td>
+        </tr>
+      </table>
+    </div>
+
+    
+  </div>
+  </div>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gleac.Assignment", "Gleac.Assignment\Gleac.Assignment.csproj", "{C352BDDF-052A-465F-947D-4A7ECBFA6FCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gleac.Assignment.SPA", "Gleac.Assignment.SPA\Gleac.Assignment.SPA.csproj", "{3C7807CB-2A8D-4C20-9843-34ECAA7C598B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C352BDDF-052A-465F-947D-4A7ECBFA6FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C352BDDF-052A-465F-947D-4A7ECBFA6FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C352BDDF-052A-465F-947D-4A7ECBFA6FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C352BDDF-052A-465F-947D-4A7ECBFA6FCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7807CB-2A8D-4C20-9843-34ECAA7C598B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7807CB-2A8D-4C20-9843-34ECAA7C598B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7807CB-2A8D-4C20-9843-34ECAA7C598B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7807CB-2A8D-4C20-9843-34ECAA7C598B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99C85C3E-0826-4267-836D-D4CA53BB8A72}
+	EndGlobalSection
+EndGlobal
